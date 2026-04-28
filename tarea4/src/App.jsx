@@ -4,7 +4,7 @@ import './App.css'
 import Navbar from './components/NavBar'
 import Home from './pages/Home'
 import Detalle from './pages/Detalle'
-
+import Notfound from './pages/Notfound'
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/"             element={<Home />}     />
           <Route path="/usuarios/:id" element={<Detalle />}  />
+          <Route path="/notfound"     element={<Notfound/>} />
         </Routes>
       </div>
     </BrowserRouter>
