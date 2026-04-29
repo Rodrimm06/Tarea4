@@ -5,6 +5,7 @@ import Navbar from './components/NavBar'
 import Home from './pages/Home'
 import Detalle from './pages/Detalle'
 import Notfound from './pages/Notfound'
+import Usuarios from './pages/Usuarios'
 
 function App() {
   return (
@@ -12,9 +13,10 @@ function App() {
       <Navbar />
       <div className="max-w-2xl mx-auto px-5 py-8">
         <Routes>
-          <Route path="/"             element={<Home />}     />
-          <Route path="/usuarios/:id" element={<Detalle />}  />
-          <Route path="/notfound"     element={<Notfound/>} />
+          <Route path="/" element={<Home />}     />
+          <Route path="/usuario/:id" element={<Detalle />}  />
+          <Route path="*" element={<Notfound/>} />
+          <Route path="/usuarios"  element={<Usuarios/>} />
         </Routes>
       </div>
     </BrowserRouter>

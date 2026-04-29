@@ -13,8 +13,6 @@ function Detalle() {
 
   useEffect(() => {
     const userId = Number(id);
-
-    
     if (userId < 1 || userId > 10) {
       navigate('/notfound');
       return;
@@ -46,14 +44,14 @@ function Detalle() {
       {error && <p className="buscador-error">{error}</p>}
 
       {datos && !cargando && (
-        <div>
-          <h1>Usuario: {datos.username}</h1>
-          <p>Nombre: {datos.name}</p>
-          <p>Email: {datos.email}</p>
-          <p>Telefono: {datos.phone}</p>
-          <p>Sitio web: {datos.website}</p>
-          <p>Ciudad: {datos.address.city}</p>
-          <p>Empresa: {datos.company.name}</p>
+        <div className='text-serif bg-black rounded-xl'>
+          <h1 className='p-5 text-center text-white'>Usuario: {datos.username}</h1>
+          <p className='p-3 text-white'>Nombre: {datos.name}</p>
+          <p className='p-3 text-white'>Email: {datos.email}</p>
+          <p className='p-3 text-white'>Telefono: {datos.phone}</p>
+          <p className='p-3 text-white'>Sitio web: {datos.website}</p>
+          <p className='p-3 text-white'>Ciudad: {datos.address.city}</p>
+          <p className='p-3 text-white'>Empresa: {datos.company.name}</p>
         </div>
       )}
     </div>
